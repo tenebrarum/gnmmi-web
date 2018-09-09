@@ -1,0 +1,33 @@
+{
+  "name": "gnmmi-web",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "npm run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tenebrarum/gnmmi-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tenebrarum/gnmmi-web/issues"
+  },
+  "homepage": "https://github.com/tenebrarum/gnmmi-web#readme",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.0.1  ",
+    "webpack-cli": "^2.0.9"
+  }
+}
