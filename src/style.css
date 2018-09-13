@@ -1,0 +1,8 @@
+.hello {
+    color: red;
+    background: url('./background.jpg');
+}
+
+body {
+  background: #999999
+}
