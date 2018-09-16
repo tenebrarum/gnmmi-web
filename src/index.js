@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import MainPage from './container/MainPage/MainPage';
+import './style.scss';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<MainPage />, document.getElementById('root'));
