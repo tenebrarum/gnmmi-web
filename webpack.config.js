@@ -1,5 +1,5 @@
-const path = require('path');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path')
+const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
@@ -7,25 +7,32 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  entry: './src/index.js',
+  mode: 'development',
+  entry: './src/index.tsx',
   output: {
-    filename: 'main.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  devServer: {
+    contentBase: './dist',
+  },
+  devtool: 'inline-source-map',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src/app'),
+      '#': path.resolve(__dirname, 'src/'),
+    },
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   module: {
     rules: [
         {
-          test: /\.js$/,
+          test: /\.tsx?$/,
+          use: 'ts-loader',
           exclude: /node_modules/,
-          use: {
-            loader: "babel-loader"
-          }
         },
         {
-          test: /\.scss$/,
-          use: ["style-loader", "css-loader", "sass-loader"]
-        },
-        {
+          
           test: /\.(png|svg|jpg|gif)$/,
           use: [
             'file-loader'
