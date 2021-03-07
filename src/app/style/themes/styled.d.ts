@@ -1,13 +1,13 @@
 import 'styled-components'
 
-interface Fontsizes {
+interface Sizes {
   s: string
   m: string
   l: string
 }
 
 interface Fonts {
-  size: Fontsizes
+  size: Sizes
 }
 
 interface Colors {
@@ -20,10 +20,12 @@ interface Colors {
 
 interface Borders {
   default: string
+  radius: string
 }
 
 export interface GlobalTheme {
   fonts: Fonts
+  spacing: Sizes
 }
 
 export interface GnmmiTheme extends GlobalTheme {

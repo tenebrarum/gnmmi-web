@@ -1,6 +1,7 @@
 import { globalTheme } from './globalTheme'
 import { GnmmiTheme } from './styled'
 
+/* WIP and not done yet */
 export const defaultTheme: GnmmiTheme = {
   ...globalTheme,
   colors: {
@@ -12,5 +13,6 @@ export const defaultTheme: GnmmiTheme = {
   },
   borders: {
     default: '2px solid #000000',
+    radius: '25px',
   },
 }
