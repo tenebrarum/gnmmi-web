@@ -22,8 +22,11 @@ interface Borders {
   default: string
 }
 
-export interface GnmmiTheme {
+export interface GlobalTheme {
   fonts: Fonts
+}
+
+export interface GnmmiTheme extends GlobalTheme {
   colors: Colors
   borders: Borders
 }

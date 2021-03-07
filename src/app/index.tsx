@@ -4,5 +4,9 @@ import { defaultTheme } from '../themes/default'
 import { MainPage } from '@/pages/MainPage/MainPage'
 
 export const App: FC = () => {
-    return (<ThemeProvider theme={defaultTheme}><MainPage /></ThemeProvider>)
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <MainPage />
+    </ThemeProvider>
+  )
 }

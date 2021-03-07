@@ -1,22 +1,22 @@
 {
-    "compilerOptions": {
-      "module": "es6",
-      "target": "es5",
-      "jsx": "react",
-      "moduleResolution": "node",
-      "allowJs": false,
-      "noImplicitAny": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "allowSyntheticDefaultImports": true,
-      "outDir": "./dist/",
-      "sourceMap": true,
-      "baseUrl": "./",
-      "paths": {
-          "@/*": ["src/app/*"],
-          "#/*": ["src/*"]
-      }
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "node_modules/**/*"]
-  }
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "noImplicitAny": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/app/*"],
+      "#/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "node_modules/**/*"]
+}

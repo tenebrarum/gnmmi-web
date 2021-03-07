@@ -1,3 +1,3 @@
 interface ButtonProps {
-    children: React.ReactNode
+  children: React.ReactNode
 }
