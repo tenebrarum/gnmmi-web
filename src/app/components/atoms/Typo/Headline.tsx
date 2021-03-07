@@ -1,22 +1,18 @@
 import React, { FC } from 'react'
+import { StyledHeadlineH3, StyledHeadlineH2, StyledHeadlineH1 } from './Headline.styled'
 
 interface HeadlineProps {
   level?: '1' | '2' | '3'
 }
 
 export const Headline: FC<HeadlineProps> = ({ level = '1', children }) => {
-
-  if(level === '3') {
-    return (<h3>{children}</h3>)
+  if (level === '3') {
+    return <StyledHeadlineH3>{children}</StyledHeadlineH3>
   }
 
-  if(level === '2') {
-    return (<h2>{children}</h2>)
+  if (level === '2') {
+    return <StyledHeadlineH2>{children}</StyledHeadlineH2>
   }
 
-  return (
-    <h1>
-      {children}
-    </h1>
-  )
+  return <StyledHeadlineH1>{children}</StyledHeadlineH1>
 }

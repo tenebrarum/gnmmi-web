@@ -4,6 +4,8 @@ interface Sizes {
   s: string
   m: string
   l: string
+  xl: string
+  xxl: string
 }
 
 interface Fonts {

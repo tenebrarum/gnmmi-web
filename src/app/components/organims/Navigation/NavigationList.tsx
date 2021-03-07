@@ -1,21 +1,17 @@
 import React, { FC } from 'react'
+import { NavigationItem, NavigationItemProps } from './NavigationItem'
 import { StyledNavigationList } from './NavigationList.styled'
 
-interface NavItem {
-  label: string
-  icon?: string
+interface NavigationListProps {
+  navItems: NavigationItemProps[]
 }
 
-interface NavigationList {
-  navItems: NavItem[]
-}
-
-export const NavigationList: FC<NavigationList> = ({ navItems }) => {
+export const NavigationList: FC<NavigationListProps> = ({ navItems }) => {
   return (
     <StyledNavigationList>
-      {navItems.map(navItem => <div>
-        {navItem.label}
-      </div>)}
+      {navItems.map((navItem) => (
+        <NavigationItem {...navItem} />
+      ))}
     </StyledNavigationList>
   )
 }
