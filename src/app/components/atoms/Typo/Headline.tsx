@@ -1,9 +1,10 @@
+import React, { FC } from 'react'
+
 import {
   StyledHeadlineH3,
   StyledHeadlineH2,
   StyledHeadlineH1,
 } from './Headline.styled'
-import React, { FC } from 'react'
 
 interface HeadlineProps {
   level?: '1' | '2' | '3'

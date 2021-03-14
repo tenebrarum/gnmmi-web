@@ -1,5 +1,6 @@
-import { Colors } from '@/style/themes/styled'
 import styled, { ThemeConsumer } from 'styled-components'
+
+import { Colors } from '@/style/themes/styled'
 
 interface StyledSectionProps {
   color: keyof Colors

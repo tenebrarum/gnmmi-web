@@ -1,8 +1,9 @@
-import React, { FC } from 'react'
 import {
   Link as ReactRouterLink,
   LinkProps as ReactRouterLinkProps,
 } from 'react-router-dom'
+
+import React, { FC } from 'react'
 
 interface LinkProps {
   to?: string

@@ -1,7 +1,10 @@
-import { AppRoutes } from './AppRoutes'
-import { SuspenseRoute } from '@/components/templates/SuspenseRoute/SuspenseRoute'
-import React, { FC } from 'react'
 import { BrowserRouter, Switch } from 'react-router-dom'
+
+import React, { FC } from 'react'
+
+import { SuspenseRoute } from '@/components/templates/SuspenseRoute/SuspenseRoute'
+
+import { AppRoutes } from './AppRoutes'
 
 const MainPage = React.lazy(() => import('@/pages/MainPage/MainPage'))
 

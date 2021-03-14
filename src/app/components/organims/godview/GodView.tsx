@@ -1,5 +1,6 @@
-import { Button } from '@/components/atoms/Button/Button'
 import * as React from 'react'
+
+import { Button } from '@/components/atoms/Button/Button'
 
 interface GodViewProps {
   giphyUrl: string

@@ -1,7 +1,10 @@
-import { ErrorBoundary } from '../ErrorBoundary/ErrorBoundary'
-import { LoadingIndicator } from '@/components/atoms/LoadingIndicator/LoadingIndicator'
-import React, { FC, PropsWithChildren } from 'react'
 import { Route } from 'react-router-dom'
+
+import React, { FC, PropsWithChildren } from 'react'
+
+import { LoadingIndicator } from '@/components/atoms/LoadingIndicator/LoadingIndicator'
+
+import { ErrorBoundary } from '../ErrorBoundary/ErrorBoundary'
 
 interface SuspenseRouteProps {
   path: string

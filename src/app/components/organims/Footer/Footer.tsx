@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next'
+
+import React, { FC } from 'react'
+
 import { Link } from '@/components/atoms/Link/Link'
 import { Section } from '@/components/atoms/Section/Section'
 import { AppRoutes } from '@/routes/AppRoutes'
-import React, { FC } from 'react'
-import { useTranslation } from 'react-i18next'
 
 interface FooterProps {}
 

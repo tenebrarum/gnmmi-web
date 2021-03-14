@@ -1,6 +1,8 @@
-import { StyledSection } from './Section.styled'
-import { Colors } from '@/style/themes/styled'
 import React, { FC } from 'react'
+
+import { Colors } from '@/style/themes/styled'
+
+import { StyledSection } from './Section.styled'
 
 interface SectionProps {
   color?: keyof Colors
