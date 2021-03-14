@@ -8,17 +8,19 @@ import { ErrorBoundary } from '../ErrorBoundary/ErrorBoundary'
 
 interface SuspenseRouteProps {
   path: string
+  exact?: boolean
 }
 
 export const SuspenseRoute: FC<PropsWithChildren<SuspenseRouteProps>> = ({
-  children,
   path,
+  exact,
+  children,
 }) => {
   return (
-    <Route path={path}>
+    <Route path={path} exact={exact}>
       <ErrorBoundary>
         <React.Suspense fallback={<LoadingIndicator />}>
-          {children}
+            {children}
         </React.Suspense>
       </ErrorBoundary>
     </Route>

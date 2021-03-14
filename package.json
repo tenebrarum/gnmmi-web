@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --open --config webpack.dev.js",
     "bundle-analyze": "webpack --config webpack.prod.js --profile --json > stats.json",
-    "pretter": "prettier --write ./src/"
+    "prettier": "prettier --write ./src/"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,12 @@ import { GnmmiTheme } from './themes/styled'
 
 export const GlobalStyle = createGlobalStyle<GnmmiTheme>`
   ${(props) => css<GnmmiTheme>`
+    html {
+      height: 100%;
+    }
+
     body {
+      height: 100%;
       margin: 0;
 
       * {
@@ -12,6 +17,10 @@ export const GlobalStyle = createGlobalStyle<GnmmiTheme>`
         font-size: ${props.fonts.size.m};
         line-height: 1.5;
         color: ${props.colors.default};
+      }
+
+      > section {
+        height: 100%;
       }
     }
   `}

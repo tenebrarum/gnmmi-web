@@ -4,6 +4,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 const bundleAnalyzerPlugin = new BundleAnalyzerPlugin({
   generateStatsFile: true,
+  openAnalyzer: false,
 })
 
 const htmlPlugin = new HtmlWebPackPlugin({

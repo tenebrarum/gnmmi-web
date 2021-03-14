@@ -7,5 +7,7 @@ export const StyledNavigationList = styled.div`
         right:  ${props.theme.spacing.s};
         background: ${props.theme.colors.white};
         border: ${props.theme.borders.default};
+        display: flex;
+        flex-flow: column;
     `}
 `
