@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --open --config webpack.dev.js",
-    "bundle-analyze": "webpack --config webpack.prod.js --profile --json > stats.json"
+    "bundle-analyze": "webpack --config webpack.prod.js --profile --json > stats.json",
+    "pretter": "prettier --write ./src/"
   },
   "repository": {
     "type": "git",
@@ -21,14 +22,13 @@
   },
   "homepage": "https://github.com/tenebrarum/gnmmi-web#readme",
   "dependencies": {
-    "i18next": "^19.9.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-i18next": "^11.8.8",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^1.4.4",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.1",
     "@types/react-router-dom": "^5.1.7",

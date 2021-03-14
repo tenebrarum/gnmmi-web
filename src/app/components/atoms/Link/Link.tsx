@@ -1,5 +1,8 @@
 import React, { FC } from 'react'
-import { Link as ReactRouterLink, LinkProps as ReactRouterLinkProps } from 'react-router-dom'
+import {
+  Link as ReactRouterLink,
+  LinkProps as ReactRouterLinkProps,
+} from 'react-router-dom'
 
 interface LinkProps {
   to?: string
@@ -8,10 +11,13 @@ interface LinkProps {
 }
 
 export const Link: FC<LinkProps> = ({ to, href, target, children }) => {
-
-  if(to) {
+  if (to) {
     return <ReactRouterLink to={to}>{children}</ReactRouterLink>
   }
 
-  return <a href={href} target={target}>{children}</a>
+  return (
+    <a href={href} target={target}>
+      {children}
+    </a>
+  )
 }

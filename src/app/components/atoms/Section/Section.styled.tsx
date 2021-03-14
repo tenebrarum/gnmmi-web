@@ -6,5 +6,5 @@ interface StyledSectionProps {
 }
 
 export const StyledSection = styled.section<StyledSectionProps>`
-  background-color: ${props => props.theme.colors[props.color]};
+  background-color: ${(props) => props.theme.colors[props.color]};
 `

@@ -1,6 +1,6 @@
-import * as React from 'react'
 import { GodView } from '@/components/organims/godview/GodView'
 import { Page } from '@/components/templates/Page/Page'
+import * as React from 'react'
 
 export const MainPage: React.FC = () => {
   return (

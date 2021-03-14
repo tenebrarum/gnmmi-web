@@ -6,7 +6,5 @@ export interface NavigationItemProps {
 }
 
 export const NavigationItem: FC<NavigationItemProps> = ({ label, icon }) => {
-  return (
-    <a>{label}</a>
-  )
+  return <a>{label}</a>
 }

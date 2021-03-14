@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
 import { NavigationItem, NavigationItemProps } from './NavigationItem'
 import { StyledNavigationList } from './NavigationList.styled'
+import React, { FC } from 'react'
 
 interface NavigationListProps {
   navItems: NavigationItemProps[]

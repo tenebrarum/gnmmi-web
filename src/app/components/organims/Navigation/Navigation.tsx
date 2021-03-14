@@ -1,6 +1,6 @@
+import { NavigationList } from './NavigationList'
 import { Button } from '@/components/atoms/Button/Button'
 import React, { FC, useState } from 'react'
-import { NavigationList } from './NavigationList'
 
 interface Navigation {}
 
@@ -14,9 +14,7 @@ export const Navigation: FC<Navigation> = () => {
 
   return (
     <div>
-      <Button onClick={() => setIsOpen(!isOpen)}>
-        Menu
-      </Button>
+      <Button onClick={() => setIsOpen(!isOpen)}>Menu</Button>
       {isOpen && <NavigationList navItems={navItems} />}
     </div>
   )

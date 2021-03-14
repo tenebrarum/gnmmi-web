@@ -1,5 +1,5 @@
-import { createGlobalStyle, css } from 'styled-components'
 import { GnmmiTheme } from './themes/styled'
+import { createGlobalStyle, css } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle<GnmmiTheme>`
   ${(props) => css<GnmmiTheme>`

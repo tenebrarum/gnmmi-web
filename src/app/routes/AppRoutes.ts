@@ -3,5 +3,5 @@ export enum AppRoutes {
 }
 
 export enum AppRouterLinks {
-  ROOT = '/'
+  ROOT = '/',
 }
