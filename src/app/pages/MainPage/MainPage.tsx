@@ -9,3 +9,5 @@ export const MainPage: React.FC = () => {
     </Page>
   )
 }
+
+export default MainPage

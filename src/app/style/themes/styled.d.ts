@@ -12,7 +12,7 @@ interface Fonts {
   size: Sizes
 }
 
-interface Colors {
+export interface Colors {
   default: string
   info: string
   error: string

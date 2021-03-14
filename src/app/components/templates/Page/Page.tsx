@@ -1,3 +1,4 @@
+import { Footer } from '@/components/organims/Footer/Footer'
 import { Header } from '@/components/organims/Header/Header'
 import React, { FC } from 'react'
 
@@ -8,6 +9,7 @@ export const Page: FC<PageProps> = ({ children }) => {
     <div>
       <Header />
       {children}
+      <Footer />
     </div>
   )
 }

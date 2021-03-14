@@ -1,5 +1,10 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+const bundleAnalyzerPlugin = new BundleAnalyzerPlugin({
+  generateStatsFile: true,
+})
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
@@ -7,16 +12,11 @@ const htmlPlugin = new HtmlWebPackPlugin({
 })
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  devServer: {
-    contentBase: './dist',
-  },
-  devtool: 'inline-source-map',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src/app'),
@@ -37,5 +37,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [htmlPlugin],
+  plugins: [htmlPlugin, bundleAnalyzerPlugin],
 }
