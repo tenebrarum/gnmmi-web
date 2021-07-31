@@ -1,19 +1,17 @@
-import React, { Component, PropsWithChildren } from 'react'
+import React, { Component, ErrorInfo, PropsWithChildren } from 'react'
 
-export class ErrorBoundary extends Component<PropsWithChildren<{}>> {
-  public constructor(props: PropsWithChildren<{}>) {
+export class ErrorBoundary extends Component<PropsWithChildren<Record<string, unknown>>, { hasError: boolean }> {
+  public constructor(props: PropsWithChildren<Record<string, unknown>>) {
     super(props)
     this.state = { hasError: false }
   }
 
-  // @ts-expect-error
-  public componentDidCatch(error, errorInfo) {
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     console.log(error, errorInfo)
     this.setState({ hasError: true })
   }
 
-  public render() {
-    // @ts-expect-error
+  public render(): React.ReactNode {
     if (this.state.hasError) {
       return <h1>Something went wrong.</h1>
     }

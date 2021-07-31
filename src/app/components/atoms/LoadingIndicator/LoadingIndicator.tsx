@@ -1,7 +1,5 @@
 import React, { FC } from 'react'
 
-interface LoadingIndicatorProps {}
-
-export const LoadingIndicator: FC<LoadingIndicatorProps> = () => {
+export const LoadingIndicator: FC = () => {
   return <div>Loading...</div>
 }

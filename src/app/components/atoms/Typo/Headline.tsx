@@ -8,9 +8,13 @@ import {
 
 interface HeadlineProps {
   level?: '1' | '2' | '3'
+  children: React.ReactNode
 }
 
-export const Headline: FC<HeadlineProps> = ({ level = '1', children }) => {
+export const Headline: FC<HeadlineProps> = ({
+  level = '1',
+  children,
+}: HeadlineProps) => {
   if (level === '3') {
     return <StyledHeadlineH3>{children}</StyledHeadlineH3>
   }

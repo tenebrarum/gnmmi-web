@@ -1,7 +1,6 @@
+import React, { FC } from 'react'
 
 import { Switch } from 'react-router-dom'
-
-import React, { FC } from 'react'
 
 import { SuspenseRoute } from '@/components/templates/SuspenseRoute/SuspenseRoute'
 
@@ -15,13 +14,13 @@ export const ApplicationSwitch: FC = () => {
   return (
     <Switch>
       <SuspenseRoute path={AppRoutes.ROOT} exact>
-        <MainPage/>
+        <MainPage />
       </SuspenseRoute>
       <SuspenseRoute path={AppRoutes.ABOUT_US} exact>
-        <AboutUsPage/>
+        <AboutUsPage />
       </SuspenseRoute>
       <SuspenseRoute path={AppRoutes.SHOP} exact>
-        <ShopPage/>
+        <ShopPage />
       </SuspenseRoute>
     </Switch>
   )

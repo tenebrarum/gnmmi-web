@@ -4,9 +4,7 @@ import { Button } from '@/components/atoms/Button/Button'
 
 import { NavigationList } from './NavigationList'
 
-interface Navigation {}
-
-export const Navigation: FC<Navigation> = () => {
+export const Navigation: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   return (
