@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { Switch } from 'react-router-dom'
+import { Routes } from 'react-router-dom'
 
 import { SuspenseRoute } from '@/components/templates/SuspenseRoute/SuspenseRoute'
 
@@ -12,7 +12,7 @@ const ShopPage = React.lazy(() => import('@/pages/Shop/Shop'))
 
 export const ApplicationSwitch: FC = () => {
   return (
-    <Switch>
+    <Routes>
       <SuspenseRoute path={AppRoutes.ROOT} exact>
         <MainPage />
       </SuspenseRoute>
@@ -22,6 +22,6 @@ export const ApplicationSwitch: FC = () => {
       <SuspenseRoute path={AppRoutes.SHOP} exact>
         <ShopPage />
       </SuspenseRoute>
-    </Switch>
+    </Routes>
   )
 }
