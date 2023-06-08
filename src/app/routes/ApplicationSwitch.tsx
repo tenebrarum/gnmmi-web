@@ -1,8 +1,10 @@
 import React, { FC } from 'react'
 
-import { Routes } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
-import { SuspenseRoute } from '@/components/templates/SuspenseRoute/SuspenseRoute'
+import { LoadingIndicator } from '@/components/atoms/LoadingIndicator/LoadingIndicator'
+
+// Check mport { ErrorBoundary } from '@/components/templates/ErrorBoundary/ErrorBoundary'
 
 import { AppRoutes } from './AppRoutes'
 
@@ -12,16 +14,12 @@ const ShopPage = React.lazy(() => import('@/pages/Shop/Shop'))
 
 export const ApplicationSwitch: FC = () => {
   return (
-    <Routes>
-      <SuspenseRoute path={AppRoutes.ROOT} exact>
-        <MainPage />
-      </SuspenseRoute>
-      <SuspenseRoute path={AppRoutes.ABOUT_US} exact>
-        <AboutUsPage />
-      </SuspenseRoute>
-      <SuspenseRoute path={AppRoutes.SHOP} exact>
-        <ShopPage />
-      </SuspenseRoute>
-    </Routes>
+    <React.Suspense fallback={<LoadingIndicator />}>
+        <Routes>
+          <Route path={AppRoutes.ROOT} element={ <MainPage />} />
+          <Route path={AppRoutes.ABOUT_US} element={<AboutUsPage />} />
+          <Route path={AppRoutes.SHOP} element={<ShopPage />} />
+        </Routes>
+    </React.Suspense>
   )
 }
