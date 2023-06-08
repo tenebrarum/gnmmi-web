@@ -15,11 +15,11 @@ const ShopPage = React.lazy(() => import('@/pages/Shop/Shop'))
 export const ApplicationSwitch: FC = () => {
   return (
     <React.Suspense fallback={<LoadingIndicator />}>
-        <Routes>
-          <Route path={AppRoutes.ROOT} element={ <MainPage />} />
-          <Route path={AppRoutes.ABOUT_US} element={<AboutUsPage />} />
-          <Route path={AppRoutes.SHOP} element={<ShopPage />} />
-        </Routes>
+      <Routes>
+        <Route path={AppRoutes.ROOT} element={ <MainPage />} />
+        <Route path={AppRoutes.ABOUT_US} element={<AboutUsPage />} />
+        <Route path={AppRoutes.SHOP} element={<ShopPage />} />
+      </Routes>
     </React.Suspense>
   )
 }
